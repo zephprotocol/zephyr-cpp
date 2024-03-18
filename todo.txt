@@ -1,0 +1,28 @@
+TODO
+rename monero-project submodule to monero-project
+add device and device_trezor after testing
+in models, strings and pointers do not have to be boost::optional
+preserve rpc error codes, just throwing runtime_error now
+monero_wallet.cpp move utilities in monero_namespace to be private
+polish model: remove all boost::optional from model to be consistent with monero-project?
+ensure model toPropertyTrees(), etc are not unecessarily copying return objects
+monero_wallet_listener should be a class?
+way to use copy constructors instead of query copy(sp, sp) methods?
+separate wallet default impl from must impl
+create_tx and send_tx request arg should be const; need to copy
+should not need wallet.h / wallet.cpp as dependency, why are GUI deps needed?
+make model fields private and use accessors / mutators?
+remove jstring2string, be consistent with other string inits
+number of mining threads should be uint32_t instead of uint64_t
+getReserveProofAccount() jni seg fault
+sign/submit tx
+nodeToTransferRequest(), etc need a final else catch-all
+MoneroWallet getChainHeight() calling daemon connection every time, surely better way
+toPropertyTree() should take node as parameter; optimize memory elsewhere (move shared_ptrs, etc)
+enable debug logging
+model accessors/mutators/chaining?
+further automate build process
+
+LOW PRIORITY
+throw MoneroErrors with error codes instead of runtime_errors
+handle e.g. restricted or hw wallet limitations in wallet_rpc_server, e.g. on_import_outputs?

@@ -1,0 +1,3 @@
+[submodule "external/zephyr"]
+	path = external/zephyr
+	url = https://github.com/ZephyrProtocol/zephyr
